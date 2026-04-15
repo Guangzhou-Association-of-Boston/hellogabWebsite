@@ -421,3 +421,215 @@
         max-height: 400px;
     }
 }
+
+/* --- Latest News Section --- */
+.latest-news-section {
+    padding: 100px 5%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.news-container {
+    max-width: 1400px;
+    width: 100%;
+}
+
+/* Section Header */
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #F0F0F4;
+    padding-bottom: 20px;
+}
+
+.news-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.news-eyebrow {
+    color: #A6192E; /* Maroon */
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.news-headline {
+    color: #002344; /* Navy */
+    font-size: 3.2rem;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.news-view-all {
+    color: #A6192E;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.news-view-all:hover {
+    color: #920322;
+}
+
+/* Card Grid Architecture */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr; /* Forces all rows to be identical in height */
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.news-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensures the card stretches to fill the grid row completely */
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.news-card.hidden-card {
+    display: none;
+}
+
+/* Top Visual Container */
+.card-visual {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+}
+
+.card-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.category-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Color-Coding System */
+.badge-event { background-color: #A6192E; } /* Maroon */
+.badge-announcement { background-color: #002344; } /* Navy */
+.badge-workshop { background-color: #E89923; } /* Gold */
+
+/* Content Body */
+.card-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-date {
+    color: #A6192E;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.card-title {
+    color: #111111;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin: 0 0 16px 0;
+    font-family: Helvetica, Arial, sans-serif;
+    /* Enforce 2-line max height for perfectly uniform card sizes */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 3.64rem;
+}
+
+.card-summary {
+    color: #6C757D;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+    /* Line Clamp for Visual Hierarchy */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 4.8rem; /* Reserves exactly 3 lines of space */
+    flex: 1;
+}
+
+/* Footer Action */
+.card-read-more {
+    color: #002344;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.3s ease;
+    margin-top: auto;
+}
+
+.card-read-more:hover {
+    color: #A6192E;
+}
+
+.news-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .news-headline {
+        font-size: 2.5rem;
+    }
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
