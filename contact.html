@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Guangzhou Association of Boston</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <script defer src="scripts/global.js"></script>
+    <script defer src="scripts/contact.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header will be loaded here -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Hero Header Section -->
+        <section class="contact-hero">
+            <div class="contact-hero-container">
+                <h1 class="contact-headline">Get in <span class="accent-italic">Touch</span></h1>
+                <p class="contact-lead">We’re here to support our community. Reach out to us with any questions, feedback, or inquiries about joining our association.</p>
+            </div>
+        </section>
+
+        <!-- Split-Pane Contact Section -->
+        <section class="contact-split-section">
+            <div class="contact-split-container">
+                
+                <!-- Left Column: Information Block -->
+                <div class="contact-info-block">
+                    <div class="info-title-wrapper">
+                        <h2 class="info-headline">Our Information</h2>
+                    </div>
+                    <p class="info-description">Feel free to contact us through any of the channels below. We strive to respond to all inquiries as promptly as possible.</p>
+                    
+                    <div class="info-stack">
+                        <div class="info-media-item">
+                            <div class="info-icon-circle">
+                                <span class="material-symbols-outlined">email</span>
+                            </div>
+                            <div class="info-text">
+                                <h3>Email Address</h3>
+                                <p>bai2388@yahoo.com</p>
+                            </div>
+                        </div>
+                        <div class="info-media-item">
+                            <div class="info-icon-circle">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div class="info-text">
+                                <h3>Office Location</h3>
+                                <p>70 Billings Rd, Quincy, MA 02171</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-bar">
+                        <h4>FOLLOW OUR COMMUNITY</h4>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Website"><span class="material-symbols-outlined">public</span></a>
+                            <a href="#" aria-label="Share"><span class="material-symbols-outlined">share</span></a>
+                            <a href="#" aria-label="Gallery"><span class="material-symbols-outlined">photo_camera</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Contact Form Card -->
+                <div class="contact-form-block">
+                    <div class="form-card">
+                        <h3 class="form-headline">Send us a Message</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <input type="text" id="name" class="form-control" placeholder=" " required>
+                                    <label for="name" class="floating-label">Name</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" class="form-control" placeholder=" " required>
+                                    <label for="email" class="floating-label">Email</label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <input type="text" id="subject" class="form-control" placeholder=" " required>
+                                <label for="subject" class="floating-label">Subject</label>
+                            </div>
+                            <div class="form-group full-width">
+                                <textarea id="message" class="form-control textarea-control" placeholder=" " rows="6" required></textarea>
+                                <label for="message" class="floating-label">Message</label>
+                            </div>
+                            <button type="submit" class="btn-submit">SEND MESSAGE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Component Section -->
+        <section class="contact-map-section">
+            <div class="map-wrapper">
+                <iframe src="https://maps.google.com/maps?q=70%20Billings%20Rd,%20Quincy,%20MA%2002171&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Google Map of 70 Billings Rd, Quincy, MA"></iframe>
+                <div class="map-floating-card">
+                    <div class="map-card-icon"><span class="material-symbols-outlined">storefront</span></div>
+                    <div class="map-card-text">
+                        <h5>Boston Community Center</h5>
+                        <p>70 Billings Rd, Quincy, MA 02171</p>
+                        <a href="https://maps.google.com/?q=70+Billings+Rd,+Quincy,+MA+02171" target="_blank" rel="noopener" class="map-deep-link">View on Google Maps &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>

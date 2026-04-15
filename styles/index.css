@@ -309,6 +309,7 @@
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 1024px) {
+    .about-section { padding: 0px 5%; }
     .about-container { flex-direction: column; gap: 60px; }
     .about-content { max-width: 100%; text-align: center; }
     .about-headline { font-size: 2.8rem; }
@@ -323,4 +324,100 @@
     .left-track, .right-track { margin-top: 0; gap: 20px; }
     .card-module { aspect-ratio: auto; }
     .image-module { aspect-ratio: 16 / 9; }
+}
+
+/* --- History / Foundation Section --- */
+.history-section {
+    /* background-color: #ffffff; */ /* Now handled by alt-bg */
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.history-section.alt-bg {
+    background-color: #F0F0F4;
+}
+
+.history-card {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.history-row {
+    display: flex;
+    width: 100%;
+}
+
+.history-row + .history-row {
+    border-top: 1px solid #e9e9eb; /* Divider between rows */
+}
+
+.history-content {
+    flex: 1;
+    padding: 60px; /* Reduced vertical padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.accent-line {
+    width: 60px;
+    height: 4px;
+    background-color: #A6192E; /* Maroon */
+    margin-bottom: 24px;
+    border-radius: 2px;
+}
+
+.history-headline {
+    color: #A6192E; /* Bold Maroon */
+    font-size: 2.5rem;
+    margin: 0 0 30px 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.history-content p {
+    color: #45474A; /* Slate-grey */
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0 0 25px 0;
+}
+
+.history-content p:last-child {
+    margin-bottom: 0;
+}
+
+.history-visual {
+    flex: 1;
+    display: flex;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.history-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* --- History Section Mobile Responsiveness --- */
+@media (max-width: 1024px) {
+    .history-section { padding: 50px 5%; }
+    .history-row {
+        flex-direction: column; /* Stack content and visual vertically */
+    }
+    
+    .history-content {
+        padding: 50px 30px;
+    }
+
+    .history-visual img {
+        max-height: 400px;
+    }
 }

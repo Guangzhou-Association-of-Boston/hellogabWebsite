@@ -1,0 +1,195 @@
+/* --- Charter Hero Section --- */
+.charter-hero-section {
+    background-color: #ffffff;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.charter-hero-container {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.charter-hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.eyebrow-tag {
+    color: var(--primary-red);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.charter-headline {
+    color: var(--primary-navy);
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.lead-paragraph {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.charter-hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.red-texture-module {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    background-color: var(--primary-red);
+    /* In a real project, you'd use a background-image for texture */
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.05) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(166, 25, 46, 0.2);
+}
+
+/* --- Articles Grid Section --- */
+.articles-section {
+    background-color: #F8F9FA;
+    padding: 100px 5%;
+}
+
+.articles-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.article-card {
+    position: relative;
+    padding-top: 40px; /* Space for the background number */
+}
+
+.card-index {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #E9ECEF;
+    z-index: 1;
+    line-height: 1;
+    user-select: none;
+}
+
+.card-content-wrapper {
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-red);
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.card-title {
+    color: var(--primary-red);
+    font-size: 1.4rem;
+    margin: 0 0 15px 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.card-content-wrapper p {
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Sub-footer Section --- */
+.sub-footer-section {
+    background-color: #F8F9FA;
+    padding: 0 5% 100px;
+}
+
+.sub-footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.shield-icon {
+    font-size: 3rem;
+    color: #CED4DA;
+}
+
+.pull-quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--primary-navy);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.timestamp {
+    font-size: 0.9rem;
+    color: #6C757D;
+    font-weight: bold;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+    .charter-hero-section {
+        padding-bottom: 0;
+    }
+
+    .charter-hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .red-texture-module {
+        display: none;
+    }
+
+    .articles-section {
+        padding-top: 60px;
+    }
+
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .charter-headline {
+        font-size: 3rem;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pull-quote {
+        font-size: 1.2rem;
+    }
+}

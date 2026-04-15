@@ -183,6 +183,26 @@ body {
     display: none;
 }
 
+/* --- Header CTA Button --- */
+.btn-header-cta {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+    background-color: var(--primary-red);
+    color: var(--white);
+    border: 2px solid var(--primary-red);
+    margin-left: 20px;
+}
+
+.btn-header-cta:hover {
+    background-color: var(--hover-red);
+    border-color: var(--hover-red);
+}
+
 /* --- Mobile Mode (Max-width 1024px) --- */
 @media (max-width: 1024px) {
     .header-container {
@@ -207,6 +227,10 @@ body {
 
     .header-right {
         flex: 0 1 auto;
+    }
+
+    .btn-header-cta {
+        display: none; /* Hide CTA on mobile header, it can be added to the slide-in menu if needed */
     }
 
     .hamburger-menu {
